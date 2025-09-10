@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <!-- Outras Funcionalidades -->
+            
             <div class="col-md-4 mb-3">
                 <div class="card shadow-sm h-100">
                     <div class="card-body d-flex flex-column text-center">

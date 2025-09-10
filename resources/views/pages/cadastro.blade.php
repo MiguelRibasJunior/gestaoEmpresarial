@@ -6,12 +6,12 @@
         <h1 class="mb-4 text-center"> Formulário de Cadastro</h1>
 
 
-        <!-- Mensagem de sucesso -->
+        <!-- sucesso -->
         @if(session('success'))
             <div class="alert alert-success text-center">{{ session('success') }}</div>
         @endif
 
-        <!-- Mensagem de erros -->
+        <!-- Mensagem de erro -->
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul class="mb-0">
