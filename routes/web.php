@@ -5,12 +5,13 @@ use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SobreNosController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Admin\ProdutoController as AdminProdutoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PrincipalController::class, 'home'])->name('home');
 
 Route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos');
-Route::get('/produto/{id}', [ProdutoController::class, 'show'])->name('produto.show');
+Route::get('/produto/{id}', [ProdutoController::class, 'show'])->name('produtos.show');
 
 Route::get('/cadastro', [CadastroController::class, 'cadastro'])->name('cadastro');
 Route::post('/cadastro', [CadastroController::class, 'store'])->name('cadastro.store');
@@ -24,6 +25,11 @@ Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('adm
 Route::get('/admin/clientes', [AdminController::class, 'clientes'])->name('admin.clientes');
 Route::get('/admin/clientes/{id}', [AdminController::class, 'clienteShow'])->name('admin.clientes.show');
 
+Route::prefix('admin')->group(function () {
+    Route::get('/products', [AdminProdutoController::class, 'index'])->name('admin.products.index');
+    Route::get('/products/create', [AdminProdutoController::class, 'create'])->name('admin.products.create');
+    Route::post('/products', [AdminProdutoController::class, 'store'])->name('admin.products.store');
+});
 
 /*Route::get ('/produto/{produto_id}/{nome}/{categoria}',
     function(
