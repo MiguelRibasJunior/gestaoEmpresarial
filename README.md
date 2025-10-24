@@ -59,3 +59,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+<!--Projeto desenvolvido para a disciplina de Desenvolvimento Web II.O sistema permite o cadastro de clientes e produtos,integração com a API ViaCEP para preenchimento automático de endereço. Utilização de Bootstrap 5 para layout e responsividade e testes de dados realizados com Laravel Tinker.
+
+link: https://viacep.com.br , https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API ,https://laravel.com/docs/10.x/requests#storing-uploaded-files ,https://laravel.com/docs/10.x/validation .
+
+-->
